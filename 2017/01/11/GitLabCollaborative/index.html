@@ -8,12 +8,12 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="keyword"  content="“李勇，勇不言弃，勇不言弃92”">
+    <meta name="keyword"  content="“钱东彦，勇不言弃，勇不言弃92”">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <title>
         
-          gitlab多人协作开发分支控制 - 李勇的博客 | liyong’s Blog
+          gitlab多人协作开发分支控制 - 钱东彦的博客 | Dongyan Qian’s Blog
         
     </title>
 
@@ -171,7 +171,7 @@
                     <h1>gitlab多人协作开发分支控制</h1>
                     <h2 class="subheading"> &quot;没成功说明不够努力&quot;</h2>
                     <span class="meta">
-                        Posted by 李勇 on
+                        Posted by 钱东彦 on
                         2017-01-11
                     </span>
                 </div>
@@ -191,19 +191,19 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>master是主干，开发在分支中进行，开发完成后将分支（branch）的代码合并到master，测试master后再打tag。简单起见只需保留一个主干和一个分支，如果需要临时开发一个不确定且耗时的功能（例如微唐项目中的蓝牙功能）则临时从branch中拉出一个feature分支修改后合并到branch中并删除feature分支。<br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative1.png" alt="image"></p>
-<h1 id="1、建立项目-amp-添加协作者"><a href="#1、建立项目-amp-添加协作者" class="headerlink" title="1、建立项目&amp;添加协作者"></a>1、建立项目&amp;添加协作者</h1><p><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative2.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative3.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative4.png" alt="image"></p>
+                <p>master是主干，开发在分支中进行，开发完成后将分支（branch）的代码合并到master，测试master后再打tag。简单起见只需保留一个主干和一个分支，如果需要临时开发一个不确定且耗时的功能（例如微唐项目中的蓝牙功能）则临时从branch中拉出一个feature分支修改后合并到branch中并删除feature分支。<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative1.png" alt="image"></p>
+<h1 id="1、建立项目-amp-添加协作者"><a href="#1、建立项目-amp-添加协作者" class="headerlink" title="1、建立项目&amp;添加协作者"></a>1、建立项目&amp;添加协作者</h1><p><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative2.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative3.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative4.png" alt="image"></p>
 <h1 id="2、初始化项目"><a href="#2、初始化项目" class="headerlink" title="2、初始化项目"></a>2、初始化项目</h1><p>执行下面命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cd existing_folder</div><div class="line">git init</div><div class="line">git remote add origin git@255.255.255.255:XXXXXX/XXXXXX.git</div><div class="line">git add .</div><div class="line">git commit -m ‘初始化项目’</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
-<h1 id="3、建立分支"><a href="#3、建立分支" class="headerlink" title="3、建立分支"></a>3、建立分支</h1><p>按照下图所示建立分支分支名称约束为’branch/XXX’(例如“branch/0111”)，“create from”输入 master<br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative5.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative6.png" alt="image"><br>或者使用命令行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout master//首先定位到某分支或者主干</div><div class="line">git checkout -b branchname//创建新的分支</div></pre></td></tr></table></figure></p>
+<h1 id="3、建立分支"><a href="#3、建立分支" class="headerlink" title="3、建立分支"></a>3、建立分支</h1><p>按照下图所示建立分支分支名称约束为’branch/XXX’(例如“branch/0111”)，“create from”输入 master<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative5.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative6.png" alt="image"><br>或者使用命令行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout master//首先定位到某分支或者主干</div><div class="line">git checkout -b branchname//创建新的分支</div></pre></td></tr></table></figure></p>
 <h1 id="4、开发"><a href="#4、开发" class="headerlink" title="4、开发"></a>4、开发</h1><h2 id="4-1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码"><a href="#4-1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码" class="headerlink" title="4.1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码"></a>4.1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@255.255.255.255:XXXXXX/XXXXXX.git</div></pre></td></tr></table></figure>
 <p>然后定位到clone的项目文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd XXXXXX</div></pre></td></tr></table></figure></p>
 <p>最后选择checkout主干代码还是分支代码,因为是要开发所以需要checkout分支代码，如果发布版本需要checkout主干代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//主干</div><div class="line">git checkout master</div><div class="line">//分支</div><div class="line">git checkout branch/0111</div></pre></td></tr></table></figure></p>
 <h2 id="4-2、开发后合并分支代码到主干"><a href="#4-2、开发后合并分支代码到主干" class="headerlink" title="4.2、开发后合并分支代码到主干"></a>4.2、开发后合并分支代码到主干</h2><p>定位到clone的项目文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd XXXXXX</div></pre></td></tr></table></figure></p>
 <p>项目切换owner到master，然后执行merge，第二行中的“–no-ff”一定要添加，否则不显示合并的log<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git checkout master  </div><div class="line">git merge --no-ff branch／0111 -m &apos;xxx&apos;//显示Already up-to-date.说明合并成功</div><div class="line">git push origin master//上传主干</div></pre></td></tr></table></figure></p>
-<h1 id="————————————————————————"><a href="#————————————————————————" class="headerlink" title="————————————————————————-"></a>————————————————————————-</h1><h1 id=""><a href="#" class="headerlink" title="-"></a>-</h1><h1 id="下面这个是内部使用的版本"><a href="#下面这个是内部使用的版本" class="headerlink" title="下面这个是内部使用的版本"></a>下面这个是内部使用的版本</h1><h1 id="-1"><a href="#-1" class="headerlink" title="-"></a>-</h1><h1 id="————————————————————————-1"><a href="#————————————————————————-1" class="headerlink" title="————————————————————————-"></a>————————————————————————-</h1><h1 id="1、建立项目-amp-添加协作者-1"><a href="#1、建立项目-amp-添加协作者-1" class="headerlink" title="1、建立项目&amp;添加协作者"></a>1、建立项目&amp;添加协作者</h1><p><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative2.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative3.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative4.png" alt="image"></p>
+<h1 id="————————————————————————"><a href="#————————————————————————" class="headerlink" title="————————————————————————-"></a>————————————————————————-</h1><h1 id=""><a href="#" class="headerlink" title="-"></a>-</h1><h1 id="下面这个是内部使用的版本"><a href="#下面这个是内部使用的版本" class="headerlink" title="下面这个是内部使用的版本"></a>下面这个是内部使用的版本</h1><h1 id="-1"><a href="#-1" class="headerlink" title="-"></a>-</h1><h1 id="————————————————————————-1"><a href="#————————————————————————-1" class="headerlink" title="————————————————————————-"></a>————————————————————————-</h1><h1 id="1、建立项目-amp-添加协作者-1"><a href="#1、建立项目-amp-添加协作者-1" class="headerlink" title="1、建立项目&amp;添加协作者"></a>1、建立项目&amp;添加协作者</h1><p><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative2.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative3.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative4.png" alt="image"></p>
 <h1 id="2、初始化项目-1"><a href="#2、初始化项目-1" class="headerlink" title="2、初始化项目"></a>2、初始化项目</h1><p>执行下面命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">cd existing_folder</div><div class="line"></div><div class="line">git init</div><div class="line"></div><div class="line">git remote add origin git@255.255.255.255:XXXXXX/XXXXXX.git</div><div class="line"></div><div class="line">git add .</div><div class="line"></div><div class="line">git commit -m ‘初始化项目’</div><div class="line"></div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
-<h1 id="3、建立分支-1"><a href="#3、建立分支-1" class="headerlink" title="3、建立分支"></a>3、建立分支</h1><h2 id="3-1、主分支，每个项目的develop分支为开发分支-master分支为主干分支"><a href="#3-1、主分支，每个项目的develop分支为开发分支-master分支为主干分支" class="headerlink" title="3.1、主分支，每个项目的develop分支为开发分支,master分支为主干分支"></a>3.1、主分支，每个项目的develop分支为开发分支,master分支为主干分支</h2><p>按照下图所示建立分支分支名称约束为’develop’，“create from”输入 master<br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative5.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/GitLabCollaborative/GitLabCollaborative6.png" alt="image"></p>
+<h1 id="3、建立分支-1"><a href="#3、建立分支-1" class="headerlink" title="3、建立分支"></a>3、建立分支</h1><h2 id="3-1、主分支，每个项目的develop分支为开发分支-master分支为主干分支"><a href="#3-1、主分支，每个项目的develop分支为开发分支-master分支为主干分支" class="headerlink" title="3.1、主分支，每个项目的develop分支为开发分支,master分支为主干分支"></a>3.1、主分支，每个项目的develop分支为开发分支,master分支为主干分支</h2><p>按照下图所示建立分支分支名称约束为’develop’，“create from”输入 master<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative5.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/GitLabCollaborative/GitLabCollaborative6.png" alt="image"></p>
 <h2 id="3-2、开发人员分支"><a href="#3-2、开发人员分支" class="headerlink" title="3.2、开发人员分支"></a>3.2、开发人员分支</h2><p>按照上面所示方法建立开发者分支，分支名称约束为develop_name 【例如“develop_ly”或者“develop_wss”，后面加上开发者自己的标示】，“create from”输入 develop，流程与上面所说一样</p>
 <h1 id="4、开发-1"><a href="#4、开发-1" class="headerlink" title="4、开发"></a>4、开发</h1><h2 id="4-1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码-1"><a href="#4-1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码-1" class="headerlink" title="4.1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码"></a>4.1、首先创建一个项目名命名的文件夹，将代码clone到此目录中，并选择代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@255.255.255.255:XXXXXX/XXXXXX.git</div></pre></td></tr></table></figure>
 <p>然后定位到clone的项目文件夹</p>
@@ -286,7 +286,7 @@
                 <ul class="list-inline">
 ll
                     
-                        <li><a href="http://www.jianshu.com/u/bb0b840c4f46" target="_blanklylyly">李勇92</a></li>
+                        <li><a href="http://www.jianshu.com/u/bb0b840c4f46" target="_blanklylyly">钱东彦92</a></li>
                     
                 </ul>
                 
@@ -373,7 +373,7 @@ ll
 
                 
                     <li>
-                        <a target="_blank"  href="https://github.com/ly92">
+                        <a target="_blank"  href="https://github.com/MarsDoge">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse">GitHub</i>
@@ -392,11 +392,11 @@ ll
                     <span style="display: inline-block; margin: 0 5px;">
                         <i class="fa fa-heart"></i>
                     </span> 
-                    Ported by <a href="http://ly92.github.io">ly92</a> | 
+                    Ported by <a href="http://MarsDoge.github.io">MarsDoge</a> | 
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=ly92&repo=ly92.github.io&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user=MarsDoge&repo=MarsDoge.github.io&type=star&count=true" >
                     </iframe>
                 </p>
             </div>

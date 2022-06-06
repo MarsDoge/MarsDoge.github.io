@@ -8,12 +8,12 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="keyword"  content="“李勇，勇不言弃，勇不言弃92”">
+    <meta name="keyword"  content="“钱东彦，勇不言弃，勇不言弃92”">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <title>
         
-          使用pycharm新建Django项目 - 李勇的博客 | liyong’s Blog
+          使用pycharm新建Django项目 - 钱东彦的博客 | Dongyan Qian’s Blog
         
     </title>
 
@@ -171,7 +171,7 @@
                     <h1>使用pycharm新建Django项目</h1>
                     <h2 class="subheading"> &quot;没成功说明不够努力&quot;</h2>
                     <span class="meta">
-                        Posted by 李勇 on
+                        Posted by 钱东彦 on
                         2017-09-06
                     </span>
                 </div>
@@ -192,14 +192,14 @@
                 post-container">
 
                 <h2 id="1、pycharm下载安装"><a href="#1、pycharm下载安装" class="headerlink" title="1、pycharm下载安装"></a>1、pycharm下载安装</h2><p><a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;code=PCC" target="_blank" rel="external">pycharm付费版下载地址</a><br><a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac" target="_blank" rel="external">pycharm免费版</a><br>这里建议下载付费版软件，然后找一下破解方式，找不到破解方式的可以私信我</p>
-<h2 id="2、新建Django项目"><a href="#2、新建Django项目" class="headerlink" title="2、新建Django项目"></a>2、新建Django项目</h2><p>打开pycharm，按照下图指示<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-1.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-2.png" alt="image"></p>
-<h2 id="3、model的创建"><a href="#3、model的创建" class="headerlink" title="3、model的创建"></a>3、model的创建</h2><p>1.新建app，导航栏中点击Tools，调起“manage.py”，如下图<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-3.png" alt="image"><br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-4.png" alt="image"><br>2.在TestModel下的models.py中写入model各个类的属性，<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-5.png" alt="image"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"># -*- coding: utf-8 -*-</div><div class="line">from __future__ import unicode_literals</div><div class="line"></div><div class="line">#引用django.db中的models</div><div class="line">from django.db import models</div><div class="line"></div><div class="line">class Test(models.Model):</div><div class="line">name = models.CharField(max_length=20)</div><div class="line"></div><div class="line">class Contact(models.Model):</div><div class="line">name = models.CharField(max_length=200)</div><div class="line">age = models.IntegerField(default=0)</div><div class="line">email = models.EmailField()</div><div class="line">def __str__(self):</div><div class="line">return self.name</div><div class="line"></div><div class="line">class Tag(models.Model):</div><div class="line">contact = models.ForeignKey(Contact)</div><div class="line">name = models.CharField(max_length=50)</div><div class="line">def __str__(self):</div><div class="line">return self.name</div></pre></td></tr></table></figure></p>
+<h2 id="2、新建Django项目"><a href="#2、新建Django项目" class="headerlink" title="2、新建Django项目"></a>2、新建Django项目</h2><p>打开pycharm，按照下图指示<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-1.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-2.png" alt="image"></p>
+<h2 id="3、model的创建"><a href="#3、model的创建" class="headerlink" title="3、model的创建"></a>3、model的创建</h2><p>1.新建app，导航栏中点击Tools，调起“manage.py”，如下图<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-3.png" alt="image"><br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-4.png" alt="image"><br>2.在TestModel下的models.py中写入model各个类的属性，<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-5.png" alt="image"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"># -*- coding: utf-8 -*-</div><div class="line">from __future__ import unicode_literals</div><div class="line"></div><div class="line">#引用django.db中的models</div><div class="line">from django.db import models</div><div class="line"></div><div class="line">class Test(models.Model):</div><div class="line">name = models.CharField(max_length=20)</div><div class="line"></div><div class="line">class Contact(models.Model):</div><div class="line">name = models.CharField(max_length=200)</div><div class="line">age = models.IntegerField(default=0)</div><div class="line">email = models.EmailField()</div><div class="line">def __str__(self):</div><div class="line">return self.name</div><div class="line"></div><div class="line">class Tag(models.Model):</div><div class="line">contact = models.ForeignKey(Contact)</div><div class="line">name = models.CharField(max_length=50)</div><div class="line">def __str__(self):</div><div class="line">return self.name</div></pre></td></tr></table></figure></p>
 <p>更多模型字段可参考<a href="http://python.usyiyi.cn/translate/django_182/ref/models/fields.html" target="_blank" rel="external">模型字段</a></p>
 <h2 id="4、setting的配置"><a href="#4、setting的配置" class="headerlink" title="4、setting的配置"></a>4、setting的配置</h2><p>在项目中找到“settings.py“文件（路径：～／projectName/projectName/settings.py）<br>1.配置mysql连接信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">DATABASES = &#123;</div><div class="line">    &apos;default&apos;: &#123;</div><div class="line">        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,# 或者使用 mysql.connector.django</div><div class="line">        &apos;NAME&apos;: &apos;hello&apos;,#数据库名称</div><div class="line">        &apos;USER&apos;: &apos;root&apos;,#用户名</div><div class="line">        &apos;PASSWORD&apos;: &apos;11111111&apos;,</div><div class="line">        &apos;HOST&apos;: &apos;localhost&apos;,#主机</div><div class="line">        &apos;PORT&apos;: &apos;3306&apos;,#端口</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>2.在INSTALLED_APPS中添加刚刚注册的app<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">INSTALLED_APPS = [</div><div class="line">    &apos;django.contrib.admin&apos;,</div><div class="line">    &apos;django.contrib.auth&apos;,</div><div class="line">    &apos;django.contrib.contenttypes&apos;,</div><div class="line">    &apos;django.contrib.sessions&apos;,</div><div class="line">    &apos;django.contrib.messages&apos;,</div><div class="line">    &apos;django.contrib.staticfiles&apos;,</div><div class="line">    &apos;TestModel&apos;,</div><div class="line">]</div></pre></td></tr></table></figure></p>
 <p>3.安装数据库驱动<br>需要使用pip在虚拟环境（解释器环境）中安装支持库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install mysqlclient</div></pre></td></tr></table></figure></p>
-<h2 id="5、makemigrations与migrate的使用"><a href="#5、makemigrations与migrate的使用" class="headerlink" title="5、makemigrations与migrate的使用"></a>5、makemigrations与migrate的使用</h2><p>导航栏中点击Tools，调起“manage.py”<br>makemigrations：相当于在该app下建立migrations目录，并记录下你所有的关于modes.py的改动，比如0001_initial.py， 但是这个改动还没有作用到数据库文件<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-6.png" alt="image"><br>你可以手动打开这个文件，看看里面是什么。当makemigrations之后产生了0001_initial.py 文件，你可以查看下该migrations会对应于什么样子的SQL命令，使用如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlmigrate TestModel 0001</div></pre></td></tr></table></figure></p>
-<p><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-10.png" alt="image"><br>migrate：将该改动作用到数据库文件，比如产生table之类<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-7.png" alt="image"><br>自动生成的<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-8.png" alt="image"><br>mysql数据库中生成自动生成的<br><img src="https://raw.githubusercontent.com/ly92/images/master/django/2-9.png" alt="image"></p>
+<h2 id="5、makemigrations与migrate的使用"><a href="#5、makemigrations与migrate的使用" class="headerlink" title="5、makemigrations与migrate的使用"></a>5、makemigrations与migrate的使用</h2><p>导航栏中点击Tools，调起“manage.py”<br>makemigrations：相当于在该app下建立migrations目录，并记录下你所有的关于modes.py的改动，比如0001_initial.py， 但是这个改动还没有作用到数据库文件<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-6.png" alt="image"><br>你可以手动打开这个文件，看看里面是什么。当makemigrations之后产生了0001_initial.py 文件，你可以查看下该migrations会对应于什么样子的SQL命令，使用如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlmigrate TestModel 0001</div></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-10.png" alt="image"><br>migrate：将该改动作用到数据库文件，比如产生table之类<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-7.png" alt="image"><br>自动生成的<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-8.png" alt="image"><br>mysql数据库中生成自动生成的<br><img src="https://raw.githubusercontent.com/MarsDoge/images/master/django/2-9.png" alt="image"></p>
 
 
                 <hr>
@@ -268,7 +268,7 @@
                 <ul class="list-inline">
 ll
                     
-                        <li><a href="http://www.jianshu.com/u/bb0b840c4f46" target="_blanklylyly">李勇92</a></li>
+                        <li><a href="http://www.jianshu.com/u/bb0b840c4f46" target="_blanklylyly">钱东彦92</a></li>
                     
                 </ul>
                 
@@ -355,7 +355,7 @@ ll
 
                 
                     <li>
-                        <a target="_blank"  href="https://github.com/ly92">
+                        <a target="_blank"  href="https://github.com/MarsDoge">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse">GitHub</i>
@@ -374,11 +374,11 @@ ll
                     <span style="display: inline-block; margin: 0 5px;">
                         <i class="fa fa-heart"></i>
                     </span> 
-                    Ported by <a href="http://ly92.github.io">ly92</a> | 
+                    Ported by <a href="http://MarsDoge.github.io">MarsDoge</a> | 
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=ly92&repo=ly92.github.io&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user=MarsDoge&repo=MarsDoge.github.io&type=star&count=true" >
                     </iframe>
                 </p>
             </div>
